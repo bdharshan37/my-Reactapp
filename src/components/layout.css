@@ -15,7 +15,7 @@ a{
   font-weight: 600;
 }
 .Hero{
-  background: url('../images/wallpaper3.jpg');
+  background: url('../images/stars.jpg');
   height: 920px;
   background-size: cover;
   background-position: center;
@@ -34,26 +34,42 @@ text-align: center;
   font-size: 60px;
   font-weight: bolder;
   line-height: 1.2 ;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .Hero p{
   color: rgba(255,255,255,0.8);
   font-size: 28px;
   line-height: 1.5;
-
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
 }
 
 
 .Hero a {
   
   font-size: 18px  ;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
   text-transform: uppercase;
-  background: rgba(97, 184, 147, 0.4);
+  background: rgba(98, 97, 184, 0.4);
   padding: 12px 20px;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 30px;
+  
+}
+
+.Hero a:hover{
+  background: rgb(249, 237, 255);
+  color: rgb(0, 19, 226);
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: .5;
+
 }
 
 @media (max-width: 640px){
@@ -69,3 +85,14 @@ text-align: center;
   }
 }
 
+@keyframes HeroAnimation{
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+opacity: 1;
+transform: translateX(0px);
+  }
+  
+}
