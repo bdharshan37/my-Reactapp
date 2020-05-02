@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import Card from "../components/Card"
+import Card from "../components/card"
 
 
 const IndexPage = () => (
@@ -33,15 +33,35 @@ const IndexPage = () => (
           </path>
         </svg>
       </div>
+      </div>
      <div className="Cards">
-       <h2> 11 case studies coming soon</h2>
-       <Card 
-       title="React foe des"
-       text= "12 sections"
-       Image={require('../images/wallpaper.jpg')} />
-       </div> 
-    </div>
-  </Layout>
+       <h2> Kill-Bill case studies coming soon</h2>
+
+      <div className="CardGroup"> 
+        <Card 
+        title="The blood splattered bride"
+        text= "Chapter 1"
+        image={require('../images/8.jpg')} />
+        
+        <Card 
+        title="The lonely grave of Paula Schulz"
+        text= "Chapter 2"
+        image={require('../images/10.jpg')} />
+        
+        <Card 
+        title="Massacre at Two Pines"
+        text= "Chapter 3"
+        image={require('../images/3.jpg')} />
+        
+        <Card 
+        title="The Whole Bloody Affair."
+        text= "Chapter 4"
+        image={require('../images/5.jpg')} />
+        
+        </div>
+      </div> 
+        
+   </Layout>
 )
 
 export default IndexPage

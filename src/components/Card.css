@@ -1,0 +1,87 @@
+.Card{
+    width: 300px;
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0,.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.075, 0.2, 0.165, 0.3
+    );
+}
+
+.Card img{
+    position: absolute;
+    z-index: -1;
+    top: 8;
+    height: 110%;
+    transition: 0.8s cubic-bezier(0.075, 0.2, 0.165, 0.3
+    );
+
+}
+
+.Card:hover img{
+    transform: translateY(-20px);
+}
+.Card:hover{
+    
+    transform: scale(1.1,1.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0,0.5);
+}
+
+.Card h3{
+    color: white ;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px 0 0 20px ;
+    width: 190px;
+}
+
+.Card p{
+    color: rgba(255,255,255,0.8);
+    text-transform: uppercase;
+    
+    margin: 0 0 20px 20px;
+    align-self:end;
+
+
+    
+}
+
+.CardGroup {
+  margin: 50px 40px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1060px) {
+  .CardGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .CardGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.Cards h2 {
+    margin: 50px 20px;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(104deg, #050A27 0%,#4A548C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @media (max-width: 640px) {
+    .Cards h2 {
+      font-size: 30px;
+    }
+  }
